@@ -1,10 +1,37 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 
 const title = "Arun George Saji"; 
 ---
 
 <Layout title={title}>
+  <br><br><br><br><br>
+  <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExc3M4ZHdrcnBnNGtyMmU4a3ZtaDJ6NWExYnIxcTQ2YWlza3lpeHk4OSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xUA7bdpLxQhsSQdyog/giphy.webp" alt="Animated GIF" class="profile-gif fade-in"/>
+  <h1 class="fade-in"><center>Hello I am Arun George Saji</center></h1>
+  <h2 class="fade-in"><center>Welcome to my portfolio! Explore my work and skills.</center></h2>
 </Layout>
+
+<style>
+  .profile-gif {
+    border-radius: 50%;
+    width: 300px;  
+    height: 300px; 
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(200px);
+    animation: fadeIn 3s forwards;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
 
