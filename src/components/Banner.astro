@@ -1,11 +1,18 @@
----
----
-
 <div class="banner">
   <nav class="nav-links">
-    <a href="/about">About</a>
-    <a href="/projects">Projects</a>
-    <a href="/contact">Contact</a>
+    <div class="left-links">
+      <a href="/about">About</a>
+      <a href="/projects">Projects</a>
+      <a href="/contact">Contact</a>
+    </div>
+    <div class="socials">
+      <a href="https://github.com/your-username" target="_blank" aria-label="GitHub">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" class="social-icon" />
+      </a>
+      <a href="https://discord.com/invite/your-invite-code" target="_blank" aria-label="Discord">
+        <img src="https://i0.wp.com/www.iconarchive.com/download/i111317/fa-team/fontawesome-brands/FontAwesome-Brands-Discord.1024.png?ssl=1" alt="Discord" class="social-icon" />
+      </a>
+    </div>
   </nav>
 </div>
 
@@ -23,9 +30,13 @@
   }
 
   .nav-links {
-    margin-top: 10px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between; 
+    align-items: center; 
+  }
+
+  .left-links {
+    display: flex; 
     gap: 20px; 
   }
 
@@ -43,6 +54,22 @@
     background: rgba(var(--accent-light), 0.5); 
     border: 2px solid rgba(var(--accent), 1); 
     transform: scale(1.05); 
+  }
+
+  .socials {
+    display: flex;
+    gap: 15px; 
+  }
+
+  .social-icon {
+    width: 30px; 
+    height: 30px; 
+    vertical-align: middle; 
+    transition: transform 0.3s; 
+  }
+
+  .social-icon:hover {
+    transform: scale(1.1); 
   }
 
   @keyframes slideIn {
