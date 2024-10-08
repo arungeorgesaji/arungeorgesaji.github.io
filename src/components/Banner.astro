@@ -1,0 +1,59 @@
+---
+---
+
+<div class="banner">
+  <nav class="nav-links">
+    <a href="/about">About</a>
+    <a href="/projects">Projects</a>
+    <a href="/contact">Contact</a>
+  </nav>
+</div>
+
+<style>
+  .banner {
+    background: rgba(20, 20, 20, 0.8); 
+    color: var(--text-color);
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); 
+    animation: slideIn 2s ease;
+  }
+
+  .nav-links {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+  }
+
+  .nav-links a {
+    color: var(--accent-light); 
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px; 
+    border: 2px solid var(--accent); 
+    border-radius: 5px;
+    transition: background 0.3s, border 0.3s, transform 0.3s; 
+  }
+
+  .nav-links a:hover {
+    background: rgba(var(--accent-light), 0.5); 
+    border: 2px solid rgba(var(--accent), 1); 
+    transform: scale(1.05); 
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+</style>
+
