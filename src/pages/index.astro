@@ -31,36 +31,36 @@ const title = "Arun George Saji";
 
 <style>
   .profile-container {
-      width: 300px;
-      height: 300px;
-      margin: 0 auto;
-      border-radius: 50%;
-      padding: 10px;
-      background: linear-gradient(45deg, #f3ec78, #af4261);
-      transition: all 0.3s ease-in-out;
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    border-radius: 50%;
+    padding: 5px;
+    background: linear-gradient(45deg, var(--accent-light), var(--accent));
+    transition: all 0.3s ease-in-out;
   }
 
   .profile-container:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 20px rgba(243, 236, 120, 0.6), 0 0 20px rgba(175, 66, 97, 0.6);
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(var(--accent-light), 0.6), 0 0 20px rgba(var(--accent), 0.6);
   }
+
   .profile-gif {
-      border-radius: 50%;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      transition: transform 0.3s ease-in-out;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease-in-out;
   }
-  .profile-container:hover .profile-gif {
-      transform: rotate(5deg);
-  }
+
   .hover-scale {
     transition: color 0.3s, transform 0.3s;
   }
 
   .hover-scale:hover {
-    color: #ff6b6b;
+    color: #42a5f5;
+    color: #D19AAB;
     transform: scale(1.01);
   }
 
