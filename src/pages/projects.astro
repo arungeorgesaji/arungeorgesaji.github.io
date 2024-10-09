@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Banner from '../components/Banner.astro';
 import ProjectItem from '../components/ProjectItem.astro';
+import "../styles/projects.css";
 
 const title = "Arun George Saji - Projects";
 ---
@@ -23,49 +24,3 @@ const title = "Arun George Saji - Projects";
     </div>
   </div>
 </Layout>
-
-<style>
-  .projects-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px;
-    background-color: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    animation: fadeIn 2s ease;
-    color: #B0B0B0; 
-  }
-
-  .projects-title {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: var(--accent-light);
-    text-align: center;
-  }
-
-  .projects-description {
-    font-size: 1.2rem;
-    line-height: 1.8;
-    margin-bottom: 40px;
-    color: var(--text-color);
-    text-align: center;
-  }
-
-  .project-list {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-</style>
-
