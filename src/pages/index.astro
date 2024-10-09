@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Banner from '../components/Banner.astro'; 
+import '../styles/index.css'; 
 
 const title = "Arun George Saji";
 ---
@@ -28,84 +29,3 @@ const title = "Arun George Saji";
     </h2>
   </div>
 </Layout>
-
-<style>
-  .profile-container {
-    width: 300px;
-    height: 300px;
-    margin: 0 auto;
-    border-radius: 50%;
-    padding: 5px;
-    background: linear-gradient(45deg, var(--accent-light), var(--accent));
-    transition: all 0.3s ease-in-out;
-  }
-
-  .profile-container:hover {
-    transform: scale(1.05);
-  }
-
-  .profile-gif {
-    border-radius: 50%;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.3s ease-in-out;
-  }
-
-  .hover-scale {
-    transition: color 0.3s, transform 0.3s;
-  }
-
-  .hover-scale:hover {
-    color: #D19AAB;
-    transform: scale(1.01);
-  }
-
-  .word-fade-container {
-    text-align: center;
-    color: #B0B0B0;
-  } 
-
-  .fade-in {
-    opacity: 0;
-    transform: translateY(200px);
-    animation: fadeIn 4s forwards;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-  }
-
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: translateY(200px);
-    }
-    50% {
-      opacity: 0.8;
-      transform: translateY(50px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-      box-shadow: 0 0 20px rgba(var(--accent-light), 0.6), 0 0 20px rgba(var(--accent), 0.6);
-    }
-  }
-
-  .word-fade {
-    opacity: 0;
-    transform: translateY(20px);
-    display: inline-block;
-    animation: fadeInWord 1s forwards;
-  }
-
-  @keyframes fadeInWord {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-</style>
-
