@@ -2,7 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import Banner from '../components/Banner.astro'; 
 import '../styles/index.css'; 
-
+import { Image } from 'astro:assets';
+import programming_gif from '../assets/programming.gif';
 const title = "Arun George Saji";
 ---
 
@@ -10,7 +11,7 @@ const title = "Arun George Saji";
   <Banner />
   <br><br><br><br><br>
   <div class="profile-container">
-    <img src="programming.gif" alt="Animated GIF" class="profile-gif fade-in"/>
+    <Image src={programming_gif} alt="Animated GIF" class="profile-gif fade-in"/>
   </div>
   <div class="word-fade-container">
     <h1 class="hover-scale">

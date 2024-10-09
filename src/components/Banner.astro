@@ -1,5 +1,8 @@
 ---
 import "../styles/Banner.css";
+import { Image } from 'astro:assets';
+import github_logo from '../assets/github-logo.svg';
+import discord_logo from '../assets/discord-logo.png';
 ---
 
 <div class="banner">
@@ -12,10 +15,10 @@ import "../styles/Banner.css";
     </div>
     <div class="socials">
       <a href="https://github.com/arungeorgesaji" target="_blank" aria-label="GitHub">
-        <img src="github-logo.svg" alt="GitHub" class="social-icon" />
+        <Image src={github_logo} alt="GitHub" class="social-icon" />
       </a>
       <a href="https://discordapp.com/users/894470551094059039/" target="_blank" aria-label="Discord">
-        <img src="discord-logo.png" alt="Discord" class="social-icon" />
+        <Image src={discord_logo} alt="Discord" class="social-icon" />
       </a>
     </div>
   </nav>
