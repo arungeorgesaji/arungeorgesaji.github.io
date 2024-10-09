@@ -9,8 +9,22 @@ const title = "Arun George Saji";
   <Banner />
   <br><br><br><br><br>
   <img src="programming.gif" alt="Animated GIF" class="profile-gif fade-in"/>
-  <h1 class="fade-in"><center>Hello I am Arun George Saji</center></h1>
-  <h2 class="fade-in"><center>Welcome to my portfolio! Explore my work and skills.</center></h2>
+  <div class="word-fade-container">
+    <h1>
+      <span class="word-fade" style="animation-delay: 0s;">Hello</span>
+      <span class="word-fade" style="animation-delay: 0.2s;">I</span>
+      <span class="word-fade" style="animation-delay: 0.4s;">am</span>
+      <span class="word-fade" style="animation-delay: 0.6s;">Arun</span>
+      <span class="word-fade" style="animation-delay: 0.8s;">George</span>
+      <span class="word-fade" style="animation-delay: 1s;">Saji</span>
+    </h1>
+    <h2>
+      <span class="word-fade" style="animation-delay: 1.2s;">Welcome</span>
+      <span class="word-fade" style="animation-delay: 1.4s;">to</span>
+      <span class="word-fade" style="animation-delay: 1.6s;">my</span>
+      <span class="word-fade" style="animation-delay: 1.8s;">portfolio!</span>
+    </h2>
+  </div>
 </Layout>
 
 <style>
@@ -21,18 +35,22 @@ const title = "Arun George Saji";
     object-fit: cover;
     display: block;
     margin: 0 auto;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
-  }
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+  }  
 
   .profile-gif:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05) !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important;
   }
+
+  .word-fade-container {
+    text-align: center;
+  } 
 
   .fade-in {
     opacity: 0;
     transform: translateY(200px);
-    animation: fadeIn 3s forwards;
+    animation: fadeIn 4s forwards;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); 
   }
 
@@ -44,6 +62,24 @@ const title = "Arun George Saji";
     50% {
       opacity: 0.8;
       transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .word-fade {
+    opacity: 0;
+    transform: translateY(20px);
+    display: inline-block;
+    animation: fadeInWord 1s forwards;
+  }
+
+  @keyframes fadeInWord {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
     }
     100% {
       opacity: 1;
