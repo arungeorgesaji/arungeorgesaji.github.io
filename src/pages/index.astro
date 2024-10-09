@@ -8,9 +8,11 @@ const title = "Arun George Saji";
 <Layout title={title}>
   <Banner />
   <br><br><br><br><br>
-  <img src="programming.gif" alt="Animated GIF" class="profile-gif fade-in"/>
+  <div class="profile-container">
+    <img src="programming.gif" alt="Animated GIF" class="profile-gif fade-in"/>
+  </div>
   <div class="word-fade-container">
-    <h1>
+    <h1 class="hover-scale">
       <span class="word-fade" style="animation-delay: 0s;">Hello</span>
       <span class="word-fade" style="animation-delay: 0.2s;">I</span>
       <span class="word-fade" style="animation-delay: 0.4s;">am</span>
@@ -18,7 +20,7 @@ const title = "Arun George Saji";
       <span class="word-fade" style="animation-delay: 0.8s;">George</span>
       <span class="word-fade" style="animation-delay: 1s;">Saji</span>
     </h1>
-    <h2>
+    <h2 class="hover-scale">
       <span class="word-fade" style="animation-delay: 1.2s;">Welcome</span>
       <span class="word-fade" style="animation-delay: 1.4s;">to</span>
       <span class="word-fade" style="animation-delay: 1.6s;">my</span>
@@ -41,6 +43,15 @@ const title = "Arun George Saji";
   .profile-gif:hover {
     transform: scale(1.05) !important;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important;
+  }
+
+  .hover-scale {
+    transition: color 0.3s, transform 0.3s;
+  }
+
+  .hover-scale:hover {
+    color: #ff6b6b;
+    transform: scale(1.01);
   }
 
   .word-fade-container {
