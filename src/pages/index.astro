@@ -42,7 +42,6 @@ const title = "Arun George Saji";
 
   .profile-container:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(var(--accent-light), 0.6), 0 0 20px rgba(var(--accent), 0.6);
   }
 
   .profile-gif {
@@ -59,20 +58,20 @@ const title = "Arun George Saji";
   }
 
   .hover-scale:hover {
-    color: #42a5f5;
     color: #D19AAB;
     transform: scale(1.01);
   }
 
   .word-fade-container {
     text-align: center;
+    color: #B0B0B0;
   } 
 
   .fade-in {
     opacity: 0;
     transform: translateY(200px);
     animation: fadeIn 4s forwards;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); 
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
   }
 
   @keyframes fadeIn {
@@ -87,6 +86,7 @@ const title = "Arun George Saji";
     100% {
       opacity: 1;
       transform: translateY(0);
+      box-shadow: 0 0 20px rgba(var(--accent-light), 0.6), 0 0 20px rgba(var(--accent), 0.6);
     }
   }
 
@@ -108,3 +108,4 @@ const title = "Arun George Saji";
     }
   }
 </style>
+
