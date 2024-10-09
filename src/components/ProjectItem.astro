@@ -1,4 +1,6 @@
 ---
+import "../styles/ProjectItem.css";
+
 const { title, description, link } = Astro.props;
 --- 
 
@@ -8,38 +10,3 @@ const { title, description, link } = Astro.props;
   <br>
   <a href={link} target="_blank" class="project-link">View Project</a>
 </div>
-
-<style>
-  .project-item {
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  }
-
-  .project-title {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-    color: var(--accent-light);
-  }
-
-  .project-description {
-    font-size: 1rem;
-    margin-bottom: 15px;
-    color: var(--text-color);
-  }
-
-  .project-link {
-    padding: 10px 15px;
-    border-radius: 5px;
-    background-color: #D19AAB; 
-    color: #FFFFFF; 
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-  }
-
-  .project-link:hover {
-    background-color: var(--accent-light);
-  }
-</style>
-
