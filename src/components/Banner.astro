@@ -5,21 +5,28 @@ import github_logo from '../assets/github-logo.svg';
 import discord_logo from '../assets/discord-logo.png';
 ---
 
-<div class="banner">
-  <nav class="nav-links">
-    <div class="left-links">
-      <a href="/">Home</a>
-      <a href="/about">About</a>
-      <a href="/projects">Projects</a>
-      <a href="/contact">Contact</a>
-    </div>
-    <div class="socials">
-      <a href="https://github.com/arungeorgesaji" target="_blank" aria-label="GitHub">
-        <Image src={github_logo} alt="GitHub" class="social-icon" />
-      </a>
-      <a href="https://discordapp.com/users/894470551094059039/" target="_blank" aria-label="Discord">
-        <Image src={discord_logo} alt="Discord" class="social-icon" />
-      </a>
-    </div>
-  </nav>
-</div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+  <div class="banner">
+    <nav class="nav-links">
+      <div class="left-links">
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/projects">Projects</a>
+        <a href="/contact">Contact</a>
+      </div>
+      <div class="socials">
+        <a href="https://github.com/arungeorgesaji" target="_blank" aria-label="GitHub">
+          <Image src={github_logo} alt="GitHub" class="social-icon" />
+        </a>
+        <a href="https://discordapp.com/users/894470551094059039/" target="_blank" aria-label="Discord">
+          <Image src={discord_logo} alt="Discord" class="social-icon" />
+        </a>
+      </div>
+    </nav>
+  </div>
+</body>
