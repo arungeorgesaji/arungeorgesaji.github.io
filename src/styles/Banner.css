@@ -64,3 +64,43 @@
     opacity: 1;
   }
 }
+
+.sidebar {
+  position: fixed; 
+  top: 0; 
+  right: -250px; 
+  width: 250px; 
+  height: 100%; 
+  background: rgba(30, 30, 30, 0.9); 
+  color: white; 
+  padding: 20px; 
+  transition: right 0.3s ease; 
+  z-index: 1000; 
+}
+
+.sidebar.active {
+  right: 0; 
+}
+
+.toggle-sidebar {
+  display: none; 
+  padding: 10px 15px;
+  font-size: 1rem;
+  background: var(--accent); 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .toggle-sidebar {
+    display: block; 
+    margin: 10px auto; 
+  }
+
+  .nav-links {
+    display: none; 
+  }
+}
+

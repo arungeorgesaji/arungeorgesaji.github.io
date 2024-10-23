@@ -9,9 +9,9 @@ import discord_logo from '../assets/discord-logo.png';
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
 <body>
   <div class="banner">
+    <button class="toggle-sidebar">Menu</button> 
     <nav class="nav-links">
       <div class="left-links">
         <a href="/">Home</a>
@@ -29,4 +29,21 @@ import discord_logo from '../assets/discord-logo.png';
       </div>
     </nav>
   </div>
+
+  <div class="sidebar">
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/projects">Projects</a>
+    <a href="/contact">Contact</a>
+  </div>
+  
+  <script>
+    const toggleButton = document.querySelector('.toggle-sidebar');
+    const sidebar = document.querySelector('.sidebar');
+
+    toggleButton.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
+    });
+  </script>
 </body>
+
