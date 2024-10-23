@@ -1,3 +1,7 @@
+.spacer {
+  height: 15vh; 
+}
+
 .profile-container {
   width: 300px;
   height: 300px;
@@ -76,3 +80,35 @@
   }
 }
 
+@media (max-height: 650px) {
+  .spacer {
+    height: 10vh; 
+  }
+  
+  .profile-container {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (max-height: 550px) {
+  .spacer {
+    height: 5vh; 
+  }
+
+  .profile-container {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-height: 450px) {
+  .spacer {
+    height: 0vh; 
+  }
+
+  .profile-container {
+    width: 150px;
+    height: 150px;
+  }
+}
