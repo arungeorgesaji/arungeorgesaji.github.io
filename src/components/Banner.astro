@@ -40,11 +40,17 @@ import sidebar_icon from '../assets/sidebar-icon.png';
   </div>
   
   <script>
-    const toggleButton = document.querySelector('.toggle-sidebar');
-    const sidebar = document.querySelector('.sidebar');
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggleButton = document.querySelector('.toggle-sidebar');
+      const sidebar = document.querySelector('.sidebar');
 
-    toggleButton.addEventListener('click', () => {
-      sidebar.classList.toggle('active');
+      if (toggleButton && sidebar) {
+        toggleButton.addEventListener('click', () => {
+          sidebar.classList.toggle('active');
+        });
+      } else {
+        console.warn('Toggle button or sidebar is not present in the DOM');
+      }
     });
   </script>
 </body>

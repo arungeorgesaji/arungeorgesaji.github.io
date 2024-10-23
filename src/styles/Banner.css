@@ -113,7 +113,7 @@
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .toggle-sidebar {
     display: block; 
     margin: 0; 
