@@ -13,7 +13,7 @@
 .nav-links {
   display: flex;
   justify-content: space-between; 
-  align-items: center; 
+  align-items: center;
 }
 
 .left-links {
@@ -115,7 +115,14 @@
     margin: 0; 
   }
 
-  .nav-links {
+  .left-links {
+    display: none; 
+  }
+
+}
+
+@media (max-width: 500px) {
+  .socials {
     display: none; 
   }
 }
