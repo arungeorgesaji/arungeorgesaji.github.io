@@ -1,7 +1,7 @@
 ---
 import "../styles/Banner.css";
 import { Image } from 'astro:assets';
-import github_logo from '../assets/github-logo.svg';
+import github_logo from '../assets/github-logo.png';
 import discord_logo from '../assets/discord-logo.png';
 import sidebar_icon from '../assets/sidebar-icon.png';
 ---
@@ -41,11 +41,11 @@ import sidebar_icon from '../assets/sidebar-icon.png';
     <div class="sidebar-footer">
         <a href="https://github.com/arungeorgesaji" target="_blank" aria-label="GitHub" class="social-link">
           <Image src={github_logo} alt="Github" class="social-icon" />
-          Github
-        </a><br>
+          <span class="social-text">Github</span>
+        </a><br><br>
         <a href="https://discordapp.com/users/894470551094059039/" target="_blank" aria-label="Discord" class="social-link">
           <Image src={discord_logo} alt="Discord" class="social-icon" />
-          Discord
+          <span class="social-text">Discord</span>
         </a>
     </div>
   </div>
