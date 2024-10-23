@@ -96,7 +96,7 @@
 @media (max-width: 768px) {
   .toggle-sidebar {
     display: block; 
-    margin: 10px auto; 
+    margin: 0; 
   }
 
   .nav-links {
