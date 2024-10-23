@@ -80,6 +80,7 @@
   flex-direction: column; 
   justify-content: flex-start; 
   font-weight: bold;
+  align-items: center;
 }
 
 .sidebar a {
@@ -158,3 +159,10 @@
     display: none; 
   }
 }
+
+@media (max-width: 600px) {
+  .socials {
+    display: none; 
+  }
+}
+
