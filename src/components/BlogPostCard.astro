@@ -1,0 +1,21 @@
+---
+import "../styles/BlogPostCard.css";
+
+export interface Props {
+  title: string;
+  description: string;
+  image: string;
+  link: string;
+  date: string;
+}
+
+const { title, description, image, link, date } = Astro.props;
+---
+
+<article class="blog-post-card">
+  <img src={image} alt={title} class="post-image" />
+  <h2 class="post-title">{title}</h2>
+  <p class="post-date">{date}</p>
+  <p class="post-description">{description}</p>
+  <a href={link} class="read-more-btn">Read More</a>
+</article>

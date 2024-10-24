@@ -1,11 +1,46 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Banner from '../components/Banner.astro'; 
-import '../styles/blog.css'; 
+import Banner from '../components/Banner.astro';
+import BlogPostCard from '../components/BlogPostCard.astro';
+
 const title = "Arun George Saji";
+
+const blogPosts = [];
+
+const importBlogPosts = async () => {
+  const postFiles = [
+    import('../content/blog/post1.ts'),
+  ];
+
+  const posts = await Promise.all(postFiles);
+  posts.forEach((post) => {
+    const postData = Object.values(post)[0]; 
+    blogPosts.push(postData);
+  });
+};
+
+await importBlogPosts();
 ---
 
 <Layout title={title}>
   <Banner />
+  <header class="blog-header">
+      <h1>Latest Blog Posts</h1>
+      <p>Stay updated with our latest tutorials and guides on Linux, security, and more.</p>
+  </header>
+
+  <main class="blog-main">
+    <section class="blog-posts-grid">
+      {blogPosts.map((post) => (
+        <BlogPostCard 
+          title={post.title}
+          description={post.description}
+          image={post.image}
+          link={`/blog/${post.title.replace(/\s+/g, '-').toLowerCase()}`} 
+          date={post.date}
+        />
+      ))}
+    </section>
+  </main>
 </Layout>
 
