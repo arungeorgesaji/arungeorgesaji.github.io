@@ -11,10 +11,30 @@
   color: var(--accent-light);
 }
 
+.project-role {
+  display: inline-block;
+  background-color: #f0a500; 
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
 .project-description {
   font-size: 1rem;
   margin-bottom: 15px;
   color: var(--text-color);
+  line-height: 1.5;
+}
+
+.project-commits {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: bold; 
+  margin-top: 10px;
 }
 
 .project-link {
@@ -24,8 +44,10 @@
   color: #FFFFFF; 
   text-decoration: none;
   transition: background-color 0.3s ease;
+  background-color: #d4849a;
 }
 
 .project-link:hover {
   background-color: var(--accent-light);
 }
+
