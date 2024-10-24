@@ -8,23 +8,43 @@ body {
 
 .blog-header {
   text-align: center;
-  padding: 40px 20px;
-  background-color: #333;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #2a2a2a, #1f1f1f);
+  color: white;
+  border-bottom: 4px solid #d4849a;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.blog-header {
+  text-align: center; 
+  padding: 40px 20px; 
+  background-color: #2a2a2a; 
+  color: white; 
+  border-bottom: 2px solid #d4849a; 
 }
 
 .blog-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+  font-size: 2.5rem; 
+  margin: 0; 
+  font-family: 'Merriweather', serif; 
+  color: var(--accent-light); 
 }
 
 .blog-header p {
-  font-size: 1.125rem;
-  color: #ccc;
+  font-size: 1.125rem; 
+  color: #ccc; 
+  margin-top: 10px; 
+}
+
+.blog-subtitle {
+  max-width: 700px; 
+  margin: 0 auto; 
 }
 
 .blog-main {
-  padding: 20px;
-}
+  padding: 50px 20px;
+  background-color: #f7f7f7;
+} 
 
 .blog-posts-grid {
   display: grid;
@@ -59,11 +79,4 @@ body {
   padding: 20px;
   border-radius: 10px;
   color: #fff;
-}
-
-.post-item img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 15px;
 }

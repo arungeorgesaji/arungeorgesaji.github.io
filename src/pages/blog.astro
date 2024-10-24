@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Banner from '../components/Banner.astro';
 import BlogPostCard from '../components/BlogPostCard.astro';
-
+import "../styles/blog.css";
 const title = "Arun George Saji";
 
 const blogPosts = [];
@@ -10,6 +10,7 @@ const blogPosts = [];
 const importBlogPosts = async () => {
   const postFiles = [
     import('../content/blog/post1.ts'),
+    // Add more imports as needed
   ];
 
   const posts = await Promise.all(postFiles);
@@ -26,7 +27,7 @@ await importBlogPosts();
   <Banner />
   <header class="blog-header">
       <h1>Latest Blog Posts</h1>
-      <p>Stay updated with our latest tutorials and guides on Linux, security, and more.</p>
+      <p class="blog-subtitle">Stay updated with the latest tutorials and guides on Linux, security, and productivity.</p>
   </header>
 
   <main class="blog-main">
@@ -35,7 +36,6 @@ await importBlogPosts();
         <BlogPostCard 
           title={post.title}
           description={post.description}
-          image={post.image}
           link={`/blog/${post.title.replace(/\s+/g, '-').toLowerCase()}`} 
           date={post.date}
         />

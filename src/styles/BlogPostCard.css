@@ -3,15 +3,13 @@
   border-radius: 10px;
   padding: 20px;
   color: white;
-}
-
-.post-image {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .post-title {
+  font-family: 'Merriweather', serif; 
+  font-weight: bold;
   font-size: 1.5rem;
   margin: 0 0 10px;
 }
@@ -38,6 +36,10 @@
 }
 
 .read-more-btn:hover {
-  background-color: #c47385;
+  background-color: #e5a2b3; 
+  background-color: var(--accent-light);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
+
 
