@@ -2,13 +2,15 @@
 import "../styles/ProjectItem.css";
 
 const { title, description, link, role, commits } = Astro.props;
----
 
+const roleClass = role === 'Founder' ? 'founder' :
+                 role === 'Co-Founder' ? 'co-founder' : 'contributor';
+---
 <div class="project-item">
   <h2 class="project-title">{title}</h2>
-  <span class="project-role">{role}</span> 
+  <span class={`project-role ${roleClass}`}>{role}</span> 
   <p class="project-description">{description}</p>
-  <p class="project-commits">Commits: {commits}</p> 
+  <p class="project-commits">Commits: {commits}</p>
   <br>
   <a href={link} target="_blank" class="project-link">View Project</a>
 </div>

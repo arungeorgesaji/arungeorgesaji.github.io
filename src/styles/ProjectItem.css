@@ -13,7 +13,6 @@
 
 .project-role {
   display: inline-block;
-  background-color: #f0a500; 
   color: #fff;
   padding: 5px 10px;
   border-radius: 5px;
@@ -21,6 +20,18 @@
   margin-bottom: 10px;
   font-weight: bold;
   margin-top: 5px;
+}
+
+.project-role.founder {
+  background-color: #f0a500; 
+}
+
+.project-role.co-founder {
+  background-color: #4CAF50; 
+}
+
+.project-role.contributor {
+  background-color: #1E90FF; 
 }
 
 .project-description {
