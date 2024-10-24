@@ -8,12 +8,11 @@ const title = "Arun George Saji";
 const blogPosts = [];
 
 const importBlogPosts = async () => {
-  const postFiles = [
-    import('../content/blog/post1.ts'),
-    // Add more imports as needed
-  ];
+  const postFiles = import.meta.glob('../content/blog/*.ts');
+  const posts = await Promise.all(
+    Object.values(postFiles).map(file => file())
+  );
 
-  const posts = await Promise.all(postFiles);
   posts.forEach((post) => {
     const postData = Object.values(post)[0]; 
     blogPosts.push(postData);
@@ -27,7 +26,7 @@ await importBlogPosts();
   <Banner />
   <header class="blog-header">
       <h1>Latest Blog Posts</h1>
-      <p class="blog-subtitle">Stay updated with the latest tutorials and guides on Linux, security, and productivity.</p>
+      <p class="blog-subtitle">Exploring the world of coding, development, and open-source.</p>
   </header>
 
   <main class="blog-main">
