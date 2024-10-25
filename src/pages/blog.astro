@@ -3,23 +3,11 @@ import Layout from '../layouts/Layout.astro';
 import Banner from '../components/Banner.astro';
 import BlogPostCard from '../components/BlogPostCard.astro';
 import "../styles/blog.css";
+import { getCollection } from 'astro:content'; 
+
 const title = "Arun George Saji";
 
-const blogPosts = [];
-
-const importBlogPosts = async () => {
-  const postFiles = import.meta.glob('../content/blog/*.ts');
-  const posts = await Promise.all(
-    Object.values(postFiles).map(file => file())
-  );
-
-  posts.forEach((post) => {
-    const postData = Object.values(post)[0]; 
-    blogPosts.push(postData);
-  });
-};
-
-await importBlogPosts();
+const blogPosts = await getCollection("blog"); 
 ---
 
 <Layout title={title}>
@@ -33,13 +21,12 @@ await importBlogPosts();
     <section class="blog-posts-grid">
       {blogPosts.map((post) => (
         <BlogPostCard 
-          title={post.title}
-          description={post.description}
-          link={`/blog/${post.title.replace(/\s+/g, '-').toLowerCase()}`} 
-          date={post.date}
+          title={post.data.title} 
+          description={post.data.description}
+          link={`/blog/${post.slug}`} 
+          date={post.data.date} 
         />
       ))}
     </section>
   </main>
 </Layout>
-
