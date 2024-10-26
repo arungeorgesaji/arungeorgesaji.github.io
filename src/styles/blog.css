@@ -20,7 +20,8 @@ body {
   padding: 40px 20px; 
   background-color: #2a2a2a; 
   color: white; 
-  border-bottom: 2px solid #d4849a; 
+  border-bottom: 2px solid #d4849a;
+  animation: slideInFromTop 2s ease forwards;
 }
 
 .blog-header h1 {
@@ -52,6 +53,7 @@ body {
   gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
+  animation: fadeIn 2s ease;
 }
 
 @media (max-width: 768px) {
@@ -79,4 +81,26 @@ body {
   padding: 20px;
   border-radius: 10px;
   color: #fff;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-30px); 
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0); 
+        opacity: 1;
+    }
 }
