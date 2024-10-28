@@ -21,6 +21,9 @@ body {
   background-color: #2a2a2a; 
   color: white; 
   border-bottom: 2px solid #d4849a;
+}
+
+.blog-header.visible {
   animation: slideInFromTop 2s ease forwards;
 }
 
@@ -53,6 +56,9 @@ body {
   gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.blog-posts-grid.visible {
   animation: fadeIn 2s ease;
 }
 
@@ -69,6 +75,9 @@ body {
   text-decoration: none;
   border-radius: 5px;
   display: inline-block;
+}
+
+.read-more-btn.visible {
   transition: background-color 0.3s ease;
 }
 

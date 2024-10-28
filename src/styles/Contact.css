@@ -5,9 +5,13 @@
   background-color: rgba(255, 255, 255, 0.1); 
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  animation: fadeIn 2s ease;
   color: #B0B0B0; 
 }
+
+.contact-container.visible {
+  animation: fadeIn 2s ease;
+}
+
 
 .contact-title {
   font-size: 2.5rem;
@@ -35,9 +39,12 @@
   font-size: 1.2rem;
   color: #FFFFFF; 
   text-decoration: none;
-  transition: transform 0.3s ease, background-color 0.3s ease;
   display: inline-block;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.email-button.visible {
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .email-button:hover {
@@ -66,12 +73,18 @@
   border-radius: 10px;
   color: #FFFFFF; 
   text-decoration: none;
-  transition: transform 0.3s ease, background-color 0.3s ease;
   display: inline-block;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   flex-grow: 1; 
   text-align: center; 
 }
+
+.social-button.visible {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+
+
 
 .social-button:hover {
   background-color: var(--accent-light);

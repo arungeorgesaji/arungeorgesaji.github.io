@@ -13,8 +13,12 @@
   border-radius: 50%;
   padding: 5px;
   background: linear-gradient(45deg, var(--accent-light), var(--accent));
+}
+
+.profile-container.visible {
   transition: all 0.3s ease-in-out;
 }
+
 
 .profile-container:hover {
   transform: scale(1.05);
@@ -26,6 +30,9 @@
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+.profile-gif.visible {
   transition: transform 0.3s ease-in-out;
 }
 
@@ -43,7 +50,7 @@
   color: #B0B0B0;
 } 
 
-.fade-in {
+.fade-in.visible {
   opacity: 0;
   transform: translateY(200px);
   animation: fadeIn 4s forwards;
