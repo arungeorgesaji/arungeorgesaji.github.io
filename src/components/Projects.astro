@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProjectItem from '../components/ProjectItem.astro';
+import "../styles/projects.css";
+
+const title = "Arun George Saji - Projects";
+---
+
+<Layout title={title}>
+  <section id="projects">
+    <div class="projects-container">
+      <h1 class="projects-title">My Projects</h1>
+      <p class="projects-description">
+        Here are some of the open-source projects I've passionately worked on. Each project showcases my dedication to technology and problem-solving. While these projects involve collaboration with other contributors, I take pride in being an active participant, often playing a significant role in their development and success.
+      </p>
+      <div class="project-list">
+        <ProjectItem 
+          title="VortexLinux" 
+          description="Vortex Linux is a groundbreaking Linux distribution designed for maximum security, flexibility, and stability. By seamlessly integrating containers and virtual machines (VMs).Vortex Linux offers a unique, immutable, and atomic operating system that caters to the needs of both novice and advanced users." 
+          link="https://github.com/Vortex-Linux"
+          role="Founder"
+          commits="200+"
+        />
+      </div>
+    </div>
+  </section>
+</Layout>

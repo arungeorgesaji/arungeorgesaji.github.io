@@ -1,6 +1,11 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Banner from '../components/Banner.astro'; 
+import Home from '../components/Home.astro'; 
+import About from '../components/About.astro'; 
+import Projects from '../components/Projects.astro'; 
+import Blog from '../components/Blog.astro'; 
+import Contact from '../components/Contact.astro'; 
 import '../styles/index.css'; 
 import { Image } from 'astro:assets';
 import programming_gif from '../assets/programming.gif';
@@ -9,24 +14,9 @@ const title = "Arun George Saji";
 
 <Layout title={title}>
   <Banner />
-  <div class="spacer"></div>
-  <div class="profile-container">
-    <Image src={programming_gif} alt="Animated GIF" class="profile-gif fade-in"/>
-  </div>
-  <div class="word-fade-container">
-    <h1 class="hover-scale">
-      <span class="word-fade" style="animation-delay: 0s;">Hello</span>
-      <span class="word-fade" style="animation-delay: 0.2s;">I</span>
-      <span class="word-fade" style="animation-delay: 0.4s;">am</span>
-      <span class="word-fade" style="animation-delay: 0.6s;">Arun</span>
-      <span class="word-fade" style="animation-delay: 0.8s;">George</span>
-      <span class="word-fade" style="animation-delay: 1s;">Saji</span>
-    </h1>
-    <h2 class="hover-scale">
-      <span class="word-fade" style="animation-delay: 1.2s;">Welcome</span>
-      <span class="word-fade" style="animation-delay: 1.4s;">to</span>
-      <span class="word-fade" style="animation-delay: 1.6s;">my</span>
-      <span class="word-fade" style="animation-delay: 1.8s;">portfolio!</span>
-    </h2>
-  </div>
+  <Home />
+  <About />
+  <Projects />
+  <Blog />
+  <Contact />
 </Layout>
