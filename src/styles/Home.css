@@ -50,14 +50,14 @@
   color: #B0B0B0;
 } 
 
-.fade-in.visible {
+.fade-in-profile {
   opacity: 0;
   transform: translateY(200px);
-  animation: fadeIn 4s forwards;
+  animation: fadeInProfile 4s forwards;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
-@keyframes fadeIn {
+@keyframes fadeInProfile {
   0% {
     opacity: 0;
     transform: translateY(200px);
