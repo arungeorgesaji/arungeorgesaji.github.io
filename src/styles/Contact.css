@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center; 
   align-items: center;
+  min-height: 100vh;
 }
 
 .contact-container {
@@ -88,9 +89,6 @@
 .social-button.visible {
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
-
-
-
 
 .social-button:hover {
   background-color: var(--accent-light);

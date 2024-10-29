@@ -1,3 +1,7 @@
+#home {
+  min-height: 100vh;
+}
+
 :root {
   --profile-size: 300px;
 }
@@ -13,6 +17,7 @@
   border-radius: 50%;
   padding: 5px;
   background: linear-gradient(45deg, var(--accent-light), var(--accent));
+  margin-top: 100px;
 }
 
 .profile-container.visible {
