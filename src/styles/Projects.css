@@ -9,7 +9,7 @@
 }
 
 .projects-container.visible {
-  animation: fadeIn 2s ease;
+  animation: fadeInProjects 2s ease;
 }
 
 
@@ -34,7 +34,7 @@
   gap: 30px;
 }
 
-@keyframes fadeIn {
+@keyframes fadeInProjects {
   0% {
     opacity: 0;
     transform: translateY(30px);

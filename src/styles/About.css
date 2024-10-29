@@ -9,7 +9,7 @@
 }
 
 .about-container.visible {
-  animation: fadeIn 2s ease;
+  animation: fadeInAbout 2s ease;
 } 
 
 .about-title {
@@ -27,7 +27,7 @@
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 }
 
-@keyframes fadeIn {
+@keyframes fadeInAbout {
   0% {
     opacity: 0;
     transform: translateY(30px);
