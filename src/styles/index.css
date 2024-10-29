@@ -3,9 +3,9 @@ html {
 }
 
 section {
+  min-height: 100vh;
   padding: 20px; 
   transition: opacity 0.5s ease;
-  scroll-snap-type: x mandatory;
 }
 
 section.visible {

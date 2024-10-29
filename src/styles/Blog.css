@@ -50,12 +50,21 @@
   background-color: #f7f7f7;
 } 
 
+.blog-main {
+  padding: 50px 20px;
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+}
+
+
 .blog-posts-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
   gap: 20px; 
   max-width: 1200px; 
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 
 .blog-posts-grid.visible {
