@@ -1,11 +1,13 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Banner from '../components/Banner.astro'; 
+
 import Home from '../components/Home.astro'; 
 import About from '../components/About.astro'; 
 import Projects from '../components/Projects.astro'; 
 import Blog from '../components/Blog.astro'; 
-import Contact from '../components/Contact.astro'; 
+import Contact from '../components/Contact.astro';
+
 import '../styles/index.css'; 
 import { Image } from 'astro:assets';
 import programming_gif from '../assets/programming.gif';
@@ -24,26 +26,7 @@ const title = "Arun George Saji";
 </Layout>
 
 <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const elements = document.querySelectorAll("*"); 
-    const viewportHeight = window.innerHeight;
+  import { animationVisibility } from '../scripts/animationVisibility.ts';
 
-    const handleScroll = () => {
-      elements.forEach((element) => {
-        const rect = element.getBoundingClientRect();
-        
-        if (element.classList.length > 0) {
-          if (rect.top < viewportHeight && rect.bottom > 0) {
-            element.classList.add("visible");
-          } else {
-            element.classList.remove("visible");
-          }
-        }
-      });
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-  });
+  animationVisibility();
 </script>
-
