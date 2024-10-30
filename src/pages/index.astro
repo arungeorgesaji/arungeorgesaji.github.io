@@ -25,23 +25,25 @@ const title = "Arun George Saji";
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const sections = document.querySelectorAll("section");
+    const classNames = ["profile-container", "profile-gif", "about-container", "projects-container", "blog-header", "blog-posts-grid", "read-more-btn", "contact-container", "email-button", "social-button"];
+
+    const elements = classNames.flatMap(className => Array.from(document.querySelectorAll(`.${className}`)));
     const viewportHeight = window.innerHeight;
 
     const handleScroll = () => {
-      sections.forEach((section) => {
-        const rect = section.getBoundingClientRect();
+      elements.forEach((element) => {
+        const rect = element.getBoundingClientRect();
 
         if (rect.top < viewportHeight && rect.bottom > 0) {
-          section.classList.add("visible"); 
+          element.classList.add("visible");
         } else {
-          section.classList.remove("visible"); 
+          element.classList.remove("visible");
         }
       });
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); 
+    handleScroll();
   });
 </script>
 
