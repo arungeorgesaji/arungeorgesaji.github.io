@@ -143,14 +143,14 @@
   cursor: pointer;
 }
 
-.banner.active-page {
-  background: rgba(255, 255, 0, 0.8); 
+.active-section {
+  background: rgba(255, 220, 100, 0.8)
   color: var(--accent-dark); 
   border: 3px solid var(--accent); 
   transform: scale(1.02); 
   box-shadow: 0 6px 25px rgba(255, 215, 0, 0.6); 
   animation: glow 3s ease infinite alternate; 
-}
+} 
 
 @keyframes glow {
   from {

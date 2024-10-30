@@ -13,6 +13,6 @@ export const animationVisibility = (): void => {
    });
  };
 
- window.addEventListener("scroll", handleScroll);
+ window.addEventListener("load-animation", handleScroll);
  handleScroll();
 };
