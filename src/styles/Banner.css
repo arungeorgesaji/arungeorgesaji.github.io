@@ -12,7 +12,7 @@
   top: 0;          
   left: 0;         
   right: 0;        
-   z-index: 1000;
+  z-index: 1000;
 }
 
 .nav-links {
@@ -141,6 +141,24 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.banner.active-page {
+  background: rgba(255, 255, 0, 0.8); 
+  color: var(--accent-dark); 
+  border: 3px solid var(--accent); 
+  transform: scale(1.02); 
+  box-shadow: 0 6px 25px rgba(255, 215, 0, 0.6); 
+  animation: glow 3s ease infinite alternate; 
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+  }
+  to {
+    box-shadow: 0 0 20px rgba(255, 215, 0, 1);
+  }
 }
 
 @media (max-width: 850px) {
