@@ -1,0 +1,22 @@
+---
+import ExperienceItem from '../components/ExperienceItem.astro';
+import "../styles/Experience.css";
+---
+
+<section id="experience">
+  <div class="experience-container">
+    <h1 class="experience-title">Work Experience</h1>
+    <p class="experience-description">
+      Here’s an overview of my professional experience, detailing the roles I’ve held in various organizations, the responsibilities I managed, and the impact I made.
+    </p>
+    <div class="experience-list">
+        <ExperienceItem 
+          company="Nest Digital" 
+          role="Software Engineer Intern" 
+          duration="April 2024 - May 2024"
+          description="Worked on diverse AI projects with a focus on natural language processing (NLP). Developed a helpdesk bot using RASA to automate access requests and streamline internal processes. Contributed to several mini-projects aimed at learning and achieving smaller objectives. Utilized various frameworks and libraries in Python, including Django, TensorFlow, PyTorch, Matplotlib, Pandas, NumPy, and Chromadb."
+        />
+    </div>
+  </div>
+</section>
+
