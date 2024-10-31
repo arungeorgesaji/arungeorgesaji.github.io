@@ -1,42 +1,37 @@
 export const checkSectionsVisibility = (): void => {
   const sectionIds = ["home", "about", "experience", "projects", "blog", "contact"];
-  const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean) as HTMLElement[];
-  const viewportHeight = window.innerHeight;
+  const leftLinks = document.querySelector('.left-links') as NodeListOf<HTMLElement>; 
+  const sections = sectionIds.map(id => document.getElementById(id));
 
-  const navLinks = document.querySelectorAll('.left-links a');
-  navLinks.forEach(link => link.classList.remove('active-page'));
+  const handleScroll = (): void => {
+    const viewportHeight = window.innerHeight;
 
-  let activeSection: string | null = null; 
+    sections.forEach((section) => {
+      if (section) {
+        const rect = section.getBoundingClientRect();
+        const isVisible = rect.top < viewportHeight && rect.bottom > 0;
 
-  sections.forEach((section) => {
-    const rect = section.getBoundingClientRect();
-    if (rect.top < viewportHeight && rect.bottom > 0) {
-      activeSection = section.id; 
-    }
-  });
+        console.log(`Section: ${section.id}, Is Visible: ${isVisible}`);
 
-  if (activeSection) {
-    const activeLink = document.querySelector(`.left-links a[href="#${activeSection}"]`) as HTMLElement;
-    if (activeLink) {
-      activeLink.classList.add('active-page');
-    }
-  }
-};
+        if (leftLinks) {
+          leftLinks.querySelectorAll('.active-section').forEach(link => {
+            link.classList.remove('active-section');
+          });
 
-document.addEventListener('DOMContentLoaded', () => {
-  const toggleButton = document.querySelector('.toggle-sidebar') as HTMLElement;
-  const sidebar = document.querySelector('.sidebar') as HTMLElement;
-
-  if (toggleButton && sidebar) {
-    toggleButton.addEventListener('click', () => {
-      sidebar.classList.toggle('active');
+          if (isVisible) {
+            const activeLink = leftLinks.querySelector(`#${section.id}`);
+            if (activeLink) {
+              activeLink.classList.add('active-section');
+            }
+          }
+        }
+      }
     });
-  } else {
-    console.warn('Toggle button or sidebar is not present in the DOM');
-  }
+  };
 
-  window.addEventListener('scroll', checkSectionsVisibility);
-  window.addEventListener('resize', checkSectionsVisibility);
-  checkSectionsVisibility(); 
-});
+  window.addEventListener("scroll", handleScroll);
+  window.addEventListener("resize", handleScroll);
+
+  handleScroll();
+};
 
