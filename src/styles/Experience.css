@@ -1,5 +1,7 @@
 #experience {
   display: flex;
+  justify-content: center; 
+  align-items: center;
   min-height: 100vh;
 }
 
@@ -14,19 +16,19 @@
   margin-top: 100px;
 }
 
-.experience-title {
+.experience-section-title {
   font-size: 2.5rem;
   margin-bottom: 20px;
   color: var(--accent-light);
   text-align: center;
 }
 
-.experience-description {
+.experience-section-description {
   font-size: 1.2rem;
   line-height: 1.8;
   margin-bottom: 40px;
   color: var(--text-color);
-  text-align: left;
+  text-align: center;
 }
 
 .experience-list {
