@@ -1,37 +1,60 @@
-export const checkSectionsVisibility = (): void => {
-  const sectionIds = ["home", "about", "experience", "projects", "blog", "contact"];
-  const leftLinks = document.querySelector('.left-links') as NodeListOf<HTMLElement>; 
-  const sections = sectionIds.map(id => document.getElementById(id));
+export const checkSectionVisibility = (): void => {
+  const sections = document.querySelectorAll("section[id]") as NodeListOf<HTMLElement>;
+  const navLinks = document.querySelectorAll(".nav-links a[href^='#']") as NodeListOf<HTMLAnchorElement>;
+  const sidebarLinks = document.querySelectorAll(".sidebar a[href^='#']") as NodeListOf<HTMLAnchorElement>;
+  const viewportHeight = window.innerHeight;
 
   const handleScroll = (): void => {
-    const viewportHeight = window.innerHeight;
+    const scrollPosition = window.scrollY;
 
     sections.forEach((section) => {
-      if (section) {
-        const rect = section.getBoundingClientRect();
-        const isVisible = rect.top < viewportHeight && rect.bottom > 0;
+      const rect = section.getBoundingClientRect();
+      const sectionId = section.id;
 
-        console.log(`Section: ${section.id}, Is Visible: ${isVisible}`);
+      if (rect.top < viewportHeight / 2 && rect.bottom > viewportHeight / 2) {
+        navLinks.forEach((link) => link.classList.remove("active-section"));
+        sidebarLinks.forEach((link) => link.classList.remove("active-section"));
 
-        if (leftLinks) {
-          leftLinks.querySelectorAll('.active-section').forEach(link => {
-            link.classList.remove('active-section');
-          });
-
-          if (isVisible) {
-            const activeLink = leftLinks.querySelector(`#${section.id}`);
-            if (activeLink) {
-              activeLink.classList.add('active-section');
-            }
-          }
-        }
+        const activeLinks = document.querySelectorAll(
+          `a[href="#${sectionId}"]`
+        ) as NodeListOf<HTMLAnchorElement>;
+        activeLinks.forEach((link) => link.classList.add("active-section"));
       }
     });
   };
 
-  window.addEventListener("scroll", handleScroll);
-  window.addEventListener("resize", handleScroll);
+  let timeoutId: number | undefined;
+  const debouncedScroll = (): void => {
+    if (timeoutId) {
+      window.clearTimeout(timeoutId);
+    }
+    
+    timeoutId = window.setTimeout(() => {
+      handleScroll();
+    }, 10);
+  };
+
+  const handleLinkClick = (e: MouseEvent): void => {
+    const target = e.currentTarget as HTMLAnchorElement;
+    const sectionId = target.getAttribute("href");
+    
+    if (sectionId && sectionId.startsWith("#")) {
+      e.preventDefault();
+      const section = document.querySelector(sectionId);
+      section?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  navLinks.forEach((link) => {
+    link.addEventListener("click", handleLinkClick);
+  });
+
+  sidebarLinks.forEach((link) => {
+    link.addEventListener("click", handleLinkClick);
+  });
+
+  window.addEventListener("scroll", debouncedScroll);
+  window.addEventListener("resize", debouncedScroll);
 
   handleScroll();
 };
-
