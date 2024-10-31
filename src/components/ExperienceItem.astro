@@ -1,0 +1,15 @@
+---
+import "../styles/ExperienceItem.css";
+
+const { title, description, link, role, duration } = Astro.props;
+
+const roleClass = role === 'Intern' ? 'intern' :
+                 role === 'Developer' ? 'developer' : 'lead';
+---
+<div class="experience-item">
+  <h2 class="experience-title">{title}</h2>
+  <span class={`experience-role ${roleClass}`}>{role}</span> 
+  <p class="experience-duration">{duration}</p>
+  <p class="experience-description">{description}</p>
+</div>
+
