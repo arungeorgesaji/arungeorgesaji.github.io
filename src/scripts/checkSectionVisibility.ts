@@ -1,5 +1,5 @@
 export const checkSectionsVisibility = (): void => {
-  const sectionIds = ["home", "about", "projects", "blog", "contact"];
+  const sectionIds = ["home", "about", "experience", "projects", "blog", "contact"];
   const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean) as HTMLElement[];
   const viewportHeight = window.innerHeight;
 
