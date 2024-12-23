@@ -62,3 +62,9 @@
   background-color: var(--accent-light);
 }
 
+.project-duration {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: bold; 
+  margin-top: 10px;
+}
