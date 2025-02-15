@@ -42,10 +42,3 @@
   line-height: 1.5;
   text-align: left;
 }
-
-.experience-duration {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  font-weight: bold; 
-  margin-top: 10px;
-}
