@@ -172,20 +172,8 @@
   }
 }
 
-@media (max-width: 850px) {
-  .toggle-sidebar {
-    display: block; 
-    margin: 0; 
-  }
-
-  .left-links {
-    display: none; 
-  }
-}
-
 @media (max-width: 600px) {
   .socials {
     display: none; 
   }
 }
-
