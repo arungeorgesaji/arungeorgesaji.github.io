@@ -23,14 +23,6 @@
   text-align: center;
 }
 
-.experience-section-description {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  margin-bottom: 40px;
-  color: var(--text-color);
-  text-align: center;
-}
-
 .experience-list {
   display: flex;
   flex-direction: column;
